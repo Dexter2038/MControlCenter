@@ -28,6 +28,7 @@ public:
     ~CLI();
 
     void setCoolerBoost(Options::State on);
+    void changeUserMode(Options::Mode mode);
 };
 
 #endif // CLI_H
