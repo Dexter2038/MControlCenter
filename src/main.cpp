@@ -83,10 +83,10 @@ int main(int argc, char *argv[]) {
         QLocalSocket* socket = server.nextPendingConnection();
         if(socket->waitForConnected() && socket->waitForReadyRead()){
             QByteArray data = socket->readAll();
-            if(std::strcmp(data.data(), "show") == 0){
+            if(strcmp(data.data(), "show") == 0){
                 w.show();
             }
-            else if(std::strcmp(data.data(), "update") == 0){
+            else if(strcmp(data.data(), "update") == 0){
                 w.externalUpdate();
             }
         }
